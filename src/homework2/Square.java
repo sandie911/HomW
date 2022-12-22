@@ -1,4 +1,4 @@
-package ua.hillel.homework2;
+package homework2;
 
 public class Square {
     public static void main(String[] args) {
