@@ -14,11 +14,9 @@ public class Fruit {
                 .reduce((f, f2) -> f + f2).get();
 
         long withA = fruits.stream().filter(str -> str.startsWith("a")).count();
-        long length = fruits.stream().filter(str -> (str.length()>4)).count();
-
-
         System.out.println("Kількість фруктів, ім'я яких починається на A = " + withA);
-        System.out.println("Фрукти, довжина ім'я яких >4 = " +length);
+        System.out.println("Фрукти, довжина ім'я яких >4 : " );
+        fruits.stream().filter(str -> (str.length()>4)).forEach(System.out::println);
         System.out.println("Сума літер перших 3 фруктів = "  +sum);
     }
 }
