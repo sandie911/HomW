@@ -1,9 +1,9 @@
-package homework8.logg;
+package homework7;
 
 public enum LogModes
 {
-    Info,
-    Debug,
-    Warn,
-    Error
+    INFO,
+    DEBUG,
+    WARN,
+    ERROR
 }

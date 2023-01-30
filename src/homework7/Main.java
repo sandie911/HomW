@@ -1,4 +1,4 @@
-package homework8.logg;
+package homework7;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Logger logger = new Logger(LogModes.Info);
+        Logger logger = new Logger(LogModes.INFO);
         Person person1 = new Person("Nikita","Kovalenko","32222345",40 );
         Person person2 = new Person("","Fedorenko","56635555",23);
         List<Person> list = new ArrayList<Person>();
@@ -19,6 +19,9 @@ public class Main {
             System.out.println(person1.call());
             System.out.println(person2.call());
 
+        }
+        catch (CustomException e) {
+            logger.Write(e.getMessage());
         }
         catch (Exception exception){
             logger.Write(exception.getMessage());

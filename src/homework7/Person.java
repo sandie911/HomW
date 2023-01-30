@@ -1,4 +1,6 @@
-package homework8.logg;
+package homework7;
+
+import homework7.CustomException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,9 +55,9 @@ public class Person {
     }
 
 
-    public String call() {
+    public String call() throws CustomException {
         if (name == "") {
-            throw new RuntimeException("Field cannot be empty");
+            throw new CustomException("Field cannot be empty");
         }
         return "Зателефонувати громадянину " + name + " " + surname +   " можно за номером "  + number;
     }

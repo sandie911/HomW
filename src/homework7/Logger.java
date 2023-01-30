@@ -1,4 +1,4 @@
-package homework8.logg;
+package homework7;
 
 public class Logger {
     public static final String ANSI_RESET = "\u001B[0m";
@@ -13,16 +13,16 @@ public class Logger {
     }
     public void Write(String message){
         switch (logMode){
-            case Info:
+            case INFO:
                 System.out.println(ANSI_GREEN_BACKGROUND + message + ANSI_RESET);
                 break;
-            case Debug:
+            case DEBUG:
                 System.out.println(ANSI_YELLOW_BACKGROUND + message + ANSI_RESET);
                 break;
-            case Warn:
+            case WARN:
                 System.out.println(ANSI_BLUE_BACKGROUND + message + ANSI_RESET);
                 break;
-            case Error:
+            case ERROR:
                 System.out.println(ANSI_PURPLE_BACKGROUND + message +ANSI_RESET);
                 break;
         }
